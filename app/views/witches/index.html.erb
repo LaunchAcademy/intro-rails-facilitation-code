@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Witches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Superpower</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @witches.each do |witch| %>
+      <tr>
+        <td><%= witch.name %></td>
+        <td><%= witch.superpower %></td>
+        <td><%= link_to 'Show', witch %></td>
+        <td><%= link_to 'Edit', edit_witch_path(witch) %></td>
+        <td><%= link_to 'Destroy', witch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Witch', new_witch_path %>
