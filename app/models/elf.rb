@@ -1,3 +1,0 @@
-class Elf < ApplicationRecord
-
-end
