@@ -3,6 +3,7 @@ class WizardsController < ApplicationController
   # GET /wizards
   # GET /wizards.json
   def index
+    # binding.pry
     @wizards = Wizard.all
     # render :"views/wizards/index.html.erb"
   end
