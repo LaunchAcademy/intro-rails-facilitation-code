@@ -30,6 +30,20 @@ class WizardsController < ApplicationController
     end
   end
 
+  def edit
+    @wizard = Wizard.find(params[:id])
+  end
+
+  def update
+    @wizard = Wizard.find(params[:id])
+
+    if @wizard.update_attributes(wizard_params)
+      redirect_to "/wizards"
+    else
+      render :edit
+    end
+  end
+
 
   private
 

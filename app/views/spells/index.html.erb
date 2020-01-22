@@ -1,0 +1,11 @@
+<h2>Spells Page</h2>
+
+<% if @wizard %>
+  <h3> <%= @wizard.name %> </h3>
+<% end %>
+
+<% @spells.each do |spell| %>
+  <li>
+    <%= spell.name %>
+  </li>
+<% end %>
