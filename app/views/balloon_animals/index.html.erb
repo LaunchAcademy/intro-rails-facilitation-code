@@ -1,0 +1,6 @@
+
+<% @balloon_animals.each do |balloon_animal| %>
+<li>
+  <%= link_to(balloon_animal.animal, balloon_animal_path(balloon_animal))  %>
+</li>
+<% end %>

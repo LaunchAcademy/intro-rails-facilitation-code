@@ -10,51 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_155103) do
+ActiveRecord::Schema.define(version: 2020_07_14_142331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "elves", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "elf_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spells", force: :cascade do |t|
-    t.string "name"
+  create_table "balloon_animals", force: :cascade do |t|
+    t.string "animal", null: false
     t.string "color"
-    t.integer "wizard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "witches", force: :cascade do |t|
-    t.string "name"
-    t.string "superpower"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "wizards", force: :cascade do |t|
-    t.string "name"
-    t.string "title"
-    t.integer "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "reviews", force: :cascade do |t|
+    t.string "body", null: false
+    t.bigint "balloon_animal_id"
+    t.index ["balloon_animal_id"], name: "index_reviews_on_balloon_animal_id"
   end
 
 end

@@ -5,6 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Wizard.create(title: "First Wizars", name: "Zedicus Zule Zorander", age: 121)
-Wizard.create(title: "The White", name: "Gandalf", age: 1000)
-Wizard.create(title: "From TV", name: "Tako", age: 50)
+BalloonAnimal.create(animal: "Jaguar", color: "purpole")
+BalloonAnimal.create(animal: "Corgi", color: "Orange")

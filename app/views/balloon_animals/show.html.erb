@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @balloon_animal.animal %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @balloon_animal.color %>
+</p>
+
+<%= link_to('New Review Form For Animal', new_balloon_animal_review_path(@balloon_animal)) %>
