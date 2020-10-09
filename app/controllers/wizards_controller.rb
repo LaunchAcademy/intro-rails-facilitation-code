@@ -1,25 +1,18 @@
 class WizardsController < ApplicationController
 
-  # GET /wizards
-  # GET /wizards.json
   def index
     @wizards = Wizard.all
     # render :"views/wizards/index.html.erb"
   end
 
-  # GET /wizards/1
-  # GET /wizards/1.json
   def show
     @wizard = Wizard.find(params[:id])
   end
 
-  # GET /wizards/new
   def new
     @wizard = Wizard.new
   end
 
-  # POST /wizards
-  # POST /wizards.json
   def create
     @wizard = Wizard.new(wizard_params)
 
@@ -29,7 +22,6 @@ class WizardsController < ApplicationController
       render :new
     end
   end
-
 
   private
 
