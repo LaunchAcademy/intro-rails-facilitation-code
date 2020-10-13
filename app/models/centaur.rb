@@ -1,0 +1,3 @@
+class Centaur < ApplicationRecord
+
+end
