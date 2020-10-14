@@ -2,11 +2,11 @@ class WizardsController < ApplicationController
 
   def index
     @wizards = Wizard.all
-    # render :"views/wizards/index.html.erb"
   end
 
   def show
     @wizard = Wizard.find(params[:id])
+    @spells = @wizard.spells
   end
 
   def new
@@ -45,7 +45,7 @@ class WizardsController < ApplicationController
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def wizard_params
-      params.require(:wizard).permit(:name, :title, :age)
-    end
+  def wizard_params
+    params.require(:wizard).permit(:name, :title, :age)
+  end
 end

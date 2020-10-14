@@ -1,0 +1,8 @@
+<h1>New Spell Form</h1>
+
+<%= form_for [@wizard, @spell] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "Add New Spell" %>
+<% end %>
