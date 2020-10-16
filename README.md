@@ -1,24 +1,5 @@
-# README
+# This is Rails based app that shows how to setup basic routing and controllers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Each branch of this app has different segments implementation
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Also there are wizards and centaurs and spells
