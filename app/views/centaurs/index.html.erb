@@ -1,0 +1,9 @@
+<h1>Centaurs Index</h1>
+
+<% @centaurs.each do |centaur| %>
+<li>
+  <%= link_to(centaur.name, centaur_path(centaur)) %>
+</li>
+  
+<% end%>
+
