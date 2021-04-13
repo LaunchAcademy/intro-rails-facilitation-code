@@ -1,0 +1,12 @@
+<h1>New Spell for <%= @wizard.name %>  </h1>
+
+<%= form_for([@wizard, @spell]) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

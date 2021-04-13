@@ -1,6 +1,26 @@
 <h1>Editing Wizard</h1>
 
-<%= render 'form', wizard: @wizard %>
+<%= form_for(@wizard) do |form| %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Show', @wizard %> |
 <%= link_to 'Back', wizards_path %>
