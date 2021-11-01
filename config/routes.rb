@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # post "/wizards/search" to "/wizards/#search"
   
   resources :wizards
-
+  resources :monsters, only: :index
 end
