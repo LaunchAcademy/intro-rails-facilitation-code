@@ -15,5 +15,15 @@
   <%= @wizard.age %>
 </p>
 
-<%= link_to 'Edit', edit_wizard_path(@wizard) %> |
+<div>
+  <% @spells.each do |spell| %>
+  <li>
+    <%= spell.name  %>
+  </li>
+  <% end  %>
+</div>
+
+
+<%= link_to 'Add New Spell for This Wizard', new_wizard_spell_path(1) %>
+
 <%= link_to 'Back', wizards_path %>

@@ -4,9 +4,10 @@ class WizardsController < ApplicationController
     @wizards = Wizard.all
   end
 
-  # def show
-  #   @wizard = Wizard.find(params[:id])
-  # end
+  def show
+    @wizard = Wizard.find(params[:id])
+    @spells = @wizard.spells
+  end
 
   def new 
     @wizard = Wizard.new
@@ -19,6 +20,7 @@ class WizardsController < ApplicationController
     if @wizard.save #returns truthy and persists 
       redirect_to "/wizards"
     else 
+      flash[:error] = @wizard.errors.full_messages.to_sentence
       render :new
     end
   end
