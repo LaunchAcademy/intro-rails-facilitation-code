@@ -1,25 +1,18 @@
 <h1>New Wizard</h1>
 
+
 <%= form_for(@wizard) do |form| %>
 
-  <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
+    <%= form.text_field :name, placeholder: "Aidan" %>
+    
     <%= form.label :title %>
     <%= form.text_field :title %>
-  </div>
 
-  <div class="field">
     <%= form.label :age %>
     <%= form.number_field :age %>
-  </div>
 
-  <div class="actions">
     <%= form.submit %>
-  </div>
 <% end %>
 
 <%= link_to 'Back', wizards_path %>

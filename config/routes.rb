@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :wizards, only: [:index, :new, :create, :show] do 
     resources :spells, only: [:new, :create]
   end
+
+  # resources :spells, only: [:show, :edit, :update, :destroy]
   
 
   root 'wizards#index'
