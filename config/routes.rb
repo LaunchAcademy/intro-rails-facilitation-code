@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   # post "/wizards/search" to "/wizards/#search"
   
-  resources :wizards
-  resources :monsters, only: :index
+  resources :wizards, only: [:index, :show, :new, :create]
+
+  resources :manticores, only: [:index, :show, :new]
 end

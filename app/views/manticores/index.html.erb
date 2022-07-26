@@ -1,0 +1,8 @@
+<h1>Manticores</h1>
+
+<% @manticores.each do |manticore| %>
+    <li>
+        <%= link_to(manticore.name, manticore_path(manticore.id)) %>
+    </li>
+<% end %>
+
